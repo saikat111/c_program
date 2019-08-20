@@ -1,0 +1,23 @@
+#include <stdio.h>
+int f(int);
+int main()
+{
+    int num ,c,i=0;
+    printf("Enter the number:");
+    scanf("%d", &num);
+    printf("the fibocanni sericer:");
+    for (c=1;c<=num;c++)
+    {
+        printf("%d",f(i));
+        i++;
+    }
+    }
+    int f(int num)
+{
+    if(num == 0 || num == 1)
+    {
+        return num;
+    }
+    else
+        return (f(num - 1) + (num -2));
+}

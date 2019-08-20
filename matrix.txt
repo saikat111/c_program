@@ -1,0 +1,71 @@
+#include<stdio.h>
+int main(){
+int a[50][20],b[50][20],add[50][20],mul[50][20];
+int r,c;
+int i,j,k;
+printf("Enter your Row-size and column-size");
+scanf("%d%d", &r,&c);
+printf("Enter the a matrix:");
+for(i =0 ; i< r; i++)
+{
+    for (j = 0; j < c; j++)
+    {
+
+        scanf("%d",&a[i][j]);
+    }
+
+}
+printf("Enter the b matrix:");
+for(i =0 ; i< r; i++)
+{
+    for (j = 0; j < c; j++)
+    {
+
+        scanf("%d",&b[i][j]);
+    }
+
+}
+printf("The matrix a is :\n");
+for(i = 0; i< r; i++)
+{
+    for (j = 0; j < c; j++)
+    {
+        printf("%d\t",a[i][j]);
+    }
+printf("\n");
+}
+printf("The matrix b is :\n");
+for(i = 0; i< r; i++)
+{
+    for (j = 0; j < c; j++)
+    {
+        printf("%d\t",b[i][j]);
+    }
+printf("\n");
+
+
+}
+printf("The matrix addition is :\n");
+for(i = 0; i< r; i++)
+{
+    for (j = 0; j < c; j++)
+    {
+        add[i][j] = a[i][j] + b[i][j];
+        printf("%d\t",add[i][j]);
+    }
+printf("\n"); }
+printf("The matrix maltiply is :\n");
+for(i = 0; i< r; i++)
+{
+    for (j = 0; j < c; j++)
+    {
+        mul[i][j] = 0;
+        for(k=0;k<c;k++)
+        {
+            mul[i][j] = mul[i][j] +a[i][k] * b[k][i];
+        }
+
+        printf("%d\t",mul[i][j]);
+    }
+    printf("\n");
+    }}
